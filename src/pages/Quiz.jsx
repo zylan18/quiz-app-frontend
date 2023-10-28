@@ -22,7 +22,7 @@ export default function Quiz() {
     console.log(questions)
     const submit=()=>{
       console.log(answers)
-      axios.post("http://localhost:8765/quiz-service/quiz/submit/2",answers).then((response)=>{
+      axios.post("http://localhost:8765/quiz-service/quiz/submit",answers).then((response)=>{
         setScore(response.data)
         console.log(score)
         setShow(true)  
