@@ -48,7 +48,28 @@ export default function Quiz() {
           <CardBody pad="medium">
           <RadioButtonGroup 
           name={`question${index}`}
-          options={[question.option1,question.option2,question.option3,question.option4]}
+          options={[
+            {
+              id: question.id + " option1",
+              label:  question.option1,
+              value: question.option1 
+            },
+            {
+              id: question.id + " option2",
+              label:  question.option2,
+              value: question.option2 
+            },
+            {
+              id: question.id + " option3",
+              label:  question.option3,
+              value: question.option3 
+            },
+            {
+              id: question.id + " option4",
+              label:  question.option4,
+              value: question.option4 
+            },
+          ]}
           onChange={(e)=>addAnswer({"id":`${question.id}`,"response":e.target.value})}
           hoverIndicator
         />
